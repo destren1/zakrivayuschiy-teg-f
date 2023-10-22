@@ -12,3 +12,89 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes pointer {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(4px);
+  }
+}
+@keyframes underline {
+  from {
+    inline-size: 0%;
+  }
+  to {
+    inline-size: calc(100% - 25px);
+  }
+}
+
+.contour {
+  transition: 0.1s linear;
+}
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear;
+  transition-delay: 0.03s;
+}
+.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.3s;
+}
+.sparks {
+  opacity: 0;
+}
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.like-icon:hover .core {
+  fill: var(--themes-main-color);
+  transition: fill 0.3s linear;
+}
+.like-icon:hover .main-body {
+  fill: var(--themes-main-color);
+  transition: fill 0.3s linear;
+  transition-delay: 0.05s;
+}
+.card__icon-button:active .main-body,
+.card__icon-button:active .core {
+  fill: var(--filling);
+  transition: fill 0.3s linear;
+}
+.like-icon.is-liked .core,
+.like-icon.is-liked .main-body {
+  fill: var(--filling);
+}
+.like-icon.is-liked .contour {
+  fill: var(--filling);
+  transition: fill 0.3s linear;
+  transition-delay: 0.06s;
+}
+
+.is-liked .heart {
+  animation: heart 0.3s ease-in 0.1s;
+  transform-origin: center center;
+}
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

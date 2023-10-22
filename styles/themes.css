@@ -1,6 +1,59 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
-*/
+:root.theme-dark {
+  --themes-main-color: #00cc14;
+  --accent-font: "Press Start 2P";
+  --main-font: Inter;
+  --font-weight: 400;
+  --font-weight-bold: 785;
+  --background-color: #000;
+  --text-shadow: rgba(0, 204, 20, 0.5);
+  --text-stroke: #007f0c;
+  --button-text-color: #00cc14;
+  --background-image: repeating-linear-gradient(
+      to right,
+      #000 0%,
+      transparent 2px
+    ),
+    repeating-linear-gradient(to bottom, #007f0c, #004306);
+}
+:root.theme-light {
+  --themes-main-color: #000;
+  --accent-font: "Press Start 2P";
+  --main-font: Inter;
+  --font-weight: 400;
+  --font-weight-bold: 765;
+  --background-color: #fff;
+  --text-shadow: rgba(255, 255, 255, 0.5);
+  --text-stroke: #fff;
+  --button-text-color: #fff;
+  --background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0%,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #e7e7e7 0%,
+      #e7e7e7 0.01%,
+      #1a1a1a 100%
+    );
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --themes-main-color: #00cc14;
+    --accent-font: "Press Start 2P";
+    --main-font: Inter;
+    --font-weight: 400;
+    --font-weight-bold: 785;
+    --background-color: #000;
+    --text-shadow: rgba(0, 204, 20, 0.5);
+    --text-stroke: #007f0c;
+    --button-text-color: #00cc14;
+    --background-image: repeating-linear-gradient(
+        to right,
+        #000 0%,
+        transparent 2px
+      ),
+      repeating-linear-gradient(to bottom, #007f0c, #004306);
+  }
+}
