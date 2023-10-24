@@ -5,7 +5,9 @@
 }
 @font-face {
   font-family: Inter;
-  src: url(./Inter-Variable.woff2) format(woff2) format(woff2 supports variations) format(woff2-variations);
+  src: url(./Inter-Variable.woff2) format(woff2);
+	src: url(./Inter-Variable.woff2) format(woff2 supports variations);
+	src: url(./Inter-Variable.woff2) format(woff2-variations);
   font-display: swap;
   font-weight: 400 785;
 }

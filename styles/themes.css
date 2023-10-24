@@ -2,18 +2,19 @@
   --themes-main-color: #00cc14;
   --accent-font: "Press Start 2P";
   --main-font: Inter;
-  --font-weight: 400;
+  --font-weight: 465;
   --font-weight-bold: 785;
   --background-color: #000;
   --text-shadow: rgba(0, 204, 20, 0.5);
   --text-stroke: #007f0c;
   --button-text-color: #00cc14;
   --background-image: repeating-linear-gradient(
-      to right,
-      #000 0%,
-      transparent 2px
+      to bottom,
+      #000 0 2px,
+      transparent 2px 4px
     ),
-    repeating-linear-gradient(to bottom, #007f0c, #004306);
+    repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #007f0c, #004306);
 }
 :root.theme-light {
   --themes-main-color: #000;
@@ -26,16 +27,12 @@
   --text-stroke: #fff;
   --button-text-color: #fff;
   --background-image: repeating-linear-gradient(
-      to right,
-      #d3d3d3 0%,
-      transparent 2px
-    ),
-    repeating-linear-gradient(
       to bottom,
-      #e7e7e7 0%,
-      #e7e7e7 0.01%,
-      #1a1a1a 100%
-    );
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,17 +40,18 @@
     --themes-main-color: #00cc14;
     --accent-font: "Press Start 2P";
     --main-font: Inter;
-    --font-weight: 400;
+    --font-weight: 465;
     --font-weight-bold: 785;
     --background-color: #000;
     --text-shadow: rgba(0, 204, 20, 0.5);
     --text-stroke: #007f0c;
     --button-text-color: #00cc14;
     --background-image: repeating-linear-gradient(
-        to right,
-        #000 0%,
-        transparent 2px
+        to bottom,
+        #000 0 2px,
+        transparent 2px 4px
       ),
-      repeating-linear-gradient(to bottom, #007f0c, #004306);
+      repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
+      linear-gradient(to bottom, #007f0c, #004306);
   }
 }

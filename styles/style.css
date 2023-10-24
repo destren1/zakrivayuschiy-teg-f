@@ -1,24 +1,9 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-
-*/
-
 .page {
   display: grid;
   justify-content: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: var(--background-color);
   background-image: var(--background-image);
   background-attachment: fixed;
   background-size: cover;
@@ -28,7 +13,7 @@
   color: var(--themes-main-color);
 }
 .header {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), "fantasy";
 }
 
 .header__container {
@@ -36,7 +21,6 @@
   gap: 25px;
   flex-direction: column;
   align-items: center;
-  min-height: 323px;
   margin-block: 100px;
   max-width: 696px;
   width: 100%;
@@ -51,6 +35,7 @@
 .header__title {
   padding-top: clamp(120px, calc(110px + 2.666vw), 136px);
   font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  text-transform: uppercase;
 }
 .header__subtitle {
   font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
@@ -75,6 +60,7 @@
   border: none;
   text-transform: uppercase;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 .theme-menu__button:hover {
   opacity: 0.6;
@@ -88,6 +74,8 @@
 .theme-menu__button:after {
   content: "";
   position: absolute;
+  left: 0;
+  top: 1.1em;
   display: block;
   block-size: 2px;
   inset-inline-start: 25px;
@@ -103,7 +91,6 @@
 
 .theme-menu__button:disabled {
   opacity: 0.6;
-  transition: opacity 0.3s ease;
   pointer-events: none;
 }
 .theme-menu__button:disabled::before {
@@ -112,6 +99,7 @@
   display: block;
   opacity: 0.6;
   left: 5px;
+  top: 0;
   animation-name: pointer;
   animation-iteration-count: infinite;
   animation-duration: 0.5s;
@@ -129,28 +117,28 @@
   background-color: var(--background-color);
   border: 2px solid var(--themes-main-color, #000);
 }
-.card__image-1 {
+.filter-grayscale {
   filter: grayscale(1);
 }
-.card__image-2 {
+.filter-contrast {
   filter: contrast(500%);
 }
-.card__image-3 {
+.filter-brightness {
   filter: brightness(500%);
 }
-.card__image-4 {
+.filter-saturate {
   filter: saturate(500%);
 }
-.card__image-5 {
+.multi-filter {
   filter: hue-rotate(180deg) contrast(80%) sepia(50%);
 }
-.card__image-6 {
+.filter-sepia {
   filter: sepia(1);
 }
-.card__image-7 {
+.filter-invert {
   filter: invert(1);
 }
-.card__image-8 {
+.filter-blur {
   filter: blur(5px);
 }
 .card__container {
@@ -177,7 +165,7 @@
   right: clamp(11px, calc(11px + 1vw), 23px);
   z-index: 1;
   color: var(--themes-main-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), "fantasy";
   font-size: var(--font-size);
   text-shadow: 0 0 2px var(--text-shadow);
   opacity: 0.5;
@@ -220,11 +208,11 @@
   --font-size: 14px;
   position: relative;
   inline-size: 130px;
-  block-size: 38px;
+  min-block-size: 38px;
   border: 2px solid var(--themes-main-color, #000);
   background-color: transparent;
   font-size: var(--font-size);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), "fantasy";
   cursor: pointer;
   overflow: hidden;
 }
@@ -257,7 +245,7 @@
   color: var(--button-text-color);
 }
 
-.footer {
+.section {
   display: grid;
 }
 .floppy {
@@ -265,21 +253,20 @@
   z-index: 1;
   mix-blend-mode: difference;
   inline-size: 28px;
-  aspect-ratio: 1;
+  block-size: 28px;
 }
-.footer__button {
+.section__button {
   --font-size: 14px;
   display: grid;
   gap: 8px;
   position: relative;
   justify-items: center;
   justify-self: center;
-  margin-block: 52px 102px;
   padding: 16px 18px;
   inline-size: clamp(306px, 22.72vw + 50px, 335px);
   border: 2px solid var(--themes-main-color, #000);
   background-color: var(--background-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), "fantasy";
   font-size: var(--font-size);
   cursor: pointer;
   overflow: hidden;
@@ -299,7 +286,7 @@
   border: 2px solid var(--themes-main-color, #000);
   background-color: var(--background-color);
   color: var(--themes-main-color);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), "fantasy";
   font-size: var(--font-size);
   transition: opacity 0.3s ease-in-out;
 }
@@ -316,17 +303,23 @@
   gap: 20px;
 }
 .dialog__floppy {
+  align-self: center;
   mix-blend-mode: difference;
   inline-size: 42px;
-  aspect-ratio: 1;
+  block-size: 42px;
 }
 .dialog__text {
+	max-width: 198px;
   line-height: 150%;
   text-transform: uppercase;
 }
-.dialog__button {
-  padding-block: 9px;
+.dialog__form {
   inline-size: 100%;
+}
+.dialog__button {
+  inline-size: 100%;
+  padding-block: 9px;
+  border: 2px solid var(--themes-main-color, #000);
   line-height: 90%;
   background-color: transparent;
 }
@@ -340,7 +333,7 @@
   .main {
     gap: 49px;
   }
-  .footer__button {
+  .section__button {
     display: flex;
     gap: 8px;
     align-items: center;
