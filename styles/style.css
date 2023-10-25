@@ -252,6 +252,7 @@
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
+  color: var(--button-text-color);
   inline-size: 28px;
   block-size: 28px;
 }
@@ -305,11 +306,12 @@
 .dialog__floppy {
   align-self: center;
   mix-blend-mode: difference;
+  color: var(--button-text-color);
   inline-size: 42px;
   block-size: 42px;
 }
 .dialog__text {
-	max-width: 198px;
+  max-width: 198px;
   line-height: 150%;
   text-transform: uppercase;
 }
