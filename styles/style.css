@@ -147,7 +147,7 @@
   padding: calc(22px + (25 - 22) * ((100vw - 375px) / (1440 - 375))) 26px;
 }
 .card__subtitle {
-  padding: 6px 6px 4px;
+  padding: 6px 11px 4px;
   font-variation-settings: "wght" var(--font-weight-bold);
   font-size: var(--font-size);
 }
@@ -171,11 +171,9 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
 }
-@supports ((text-stroke: 1px var(--text-stroke))) or
-  (-webkit-text-stroke: 1px var(--text-stroke)) {
+@supports (-webkit-text-stroke: 1px var(--text-stroke)) {
   .decoration {
     -webkit-text-stroke: 1px var(--text-stroke);
-    text-stroke: 1px var(--text-stroke);
     text-shadow: none;
   }
 }
@@ -206,20 +204,22 @@
 
 .card__like-button {
   --font-size: 14px;
-  position: relative;
   inline-size: 130px;
   min-block-size: 38px;
-  border: 2px solid var(--themes-main-color, #000);
-  background-color: transparent;
   font-size: var(--font-size);
   font-family: var(--accent-font), "fantasy";
+}
+.button {
+  position: relative;
+  border: 2px solid var(--themes-main-color, #000);
+  background-color: transparent;
   cursor: pointer;
   overflow: hidden;
 }
-.card__like-button:focus {
+.button:focus {
   outline: none;
 }
-.card__like-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--themes-main-color);
   transition: box-shadow 0.3s ease;
 }
@@ -247,6 +247,7 @@
 
 .section {
   display: grid;
+  margin-block-end: 102px;
 }
 .floppy {
   position: relative;
@@ -265,7 +266,8 @@
   justify-self: center;
   padding: 16px 18px;
   inline-size: clamp(306px, 22.72vw + 50px, 335px);
-  border: 2px solid var(--themes-main-color, #000);
+  border: none;
+  outline: 2px solid var(--themes-main-color, #000);
   background-color: var(--background-color);
   font-family: var(--accent-font), "fantasy";
   font-size: var(--font-size);
@@ -321,9 +323,7 @@
 .dialog__button {
   inline-size: 100%;
   padding-block: 9px;
-  border: 2px solid var(--themes-main-color, #000);
   line-height: 90%;
-  background-color: transparent;
 }
 
 @media (375px >= width) {
@@ -335,10 +335,17 @@
   .main {
     gap: 49px;
   }
+  .card__subtitle {
+    padding-inline: 7px;
+  }
+  .section {
+    margin-block-end: 105px;
+  }
   .section__button {
     display: flex;
     gap: 8px;
     align-items: center;
+    padding-block: 12px;
   }
   .floppy {
     inline-size: 21px;
