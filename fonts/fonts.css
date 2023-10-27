@@ -3,6 +3,7 @@
   src: url(./PressStart2P-Regular.woff) format(woff);
   font-display: swap;
 }
+
 @font-face {
   font-family: Inter;
   src: url(./Inter-Variable.woff2) format(woff2),

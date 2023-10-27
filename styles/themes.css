@@ -16,6 +16,7 @@
     repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #007f0c, #004306);
 }
+
 :root.theme-light {
   --themes-main-color: #000;
   --accent-font: "Press Start 2P";
