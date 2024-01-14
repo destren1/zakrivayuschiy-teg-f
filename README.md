@@ -4,7 +4,7 @@
 
 <p align="Left"> Веб-страница личной рефлексии на моем пути обучения, где я делясь своим опытом, описываю пройденные этапы и извлеченные уроки, создавая пространство для самопознания и вдохновения. </p>
 
-<a  href="https://destren1.github.io/zakrivayuschiy-teg-f/" target="_blank" align="center"><img src="" width="100%" alt="Гифка с обзором сайта"></a>
+<a  href="https://destren1.github.io/zakrivayuschiy-teg-f/" target="_blank" align="center"><img src="./images/zakrivaushiy-teg-f_video.gif" width="100%" alt="Гифка с обзором сайта"></a>
 
 [Открыть в браузере](https://destren1.github.io/zakrivayuschiy-teg-f/)
 
